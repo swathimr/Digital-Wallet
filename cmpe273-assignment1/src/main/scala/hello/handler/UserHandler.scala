@@ -10,7 +10,7 @@ class UserHandler {
   
   def populateUser(user:User) = {
      val today = Calendar.getInstance().getTime()
-     val dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+     val dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
      val formattedDate:String =dateFormat.format(today)
     val created_at = new java.sql.Timestamp(System.currentTimeMillis()).toString();
      val random= (Math.round(Math.random() * 89999) + 10000).toString()
@@ -29,7 +29,7 @@ class UserHandler {
   
   def updtUser(userId:String,user:User) = {
       val today = Calendar.getInstance().getTime()
-      val dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+      val dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
      val formattedDate:String =dateFormat.format(today)
      
    if(HashMapHandler.userMap.contains(userId))

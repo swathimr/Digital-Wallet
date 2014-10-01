@@ -8,7 +8,6 @@ class BankAccountHandler {
 def populateBankAccount(bankAccount:BankAccount,userId:String) = {
   
      val mapName = HashMapHandler.BankAccountMap
-     val today = Calendar.getInstance().getTime().toString()
      val random= (Math.round(Math.random() * 89999) + 10000).toString()
      bankAccount.ba_id_=("b-"+random)
      bankAccount.account_name_=(bankAccount.account_name)

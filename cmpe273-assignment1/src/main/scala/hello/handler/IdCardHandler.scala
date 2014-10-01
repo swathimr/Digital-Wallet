@@ -7,7 +7,6 @@ import java.util.Date
 class IdCardHandler {
   
   def populateIdcard(idcard:IdCard,userId:String) = {
-     val today = Calendar.getInstance().getTime().toString()
      val random= (Math.round(Math.random() * 89999) + 10000).toString()
      idcard.cardId_=("C-"+random)
      idcard.card_name_=(idcard.card_name)

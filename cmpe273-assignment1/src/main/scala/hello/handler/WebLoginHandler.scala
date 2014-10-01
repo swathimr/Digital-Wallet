@@ -7,7 +7,6 @@ class WebLoginHandler {
     val userloginmapName =HashMapHandler.userLoginMap
     def populateWebLogin(webLogin:WebLogin,userId:String) = {
     val mapName = HashMapHandler.webLoginMap
-     val today = Calendar.getInstance().getTime().toString()
      val random= (Math.round(Math.random() * 89999) + 10000).toString()
      webLogin.login_id_=("l-"+random)
      webLogin.url_=(webLogin.url)
